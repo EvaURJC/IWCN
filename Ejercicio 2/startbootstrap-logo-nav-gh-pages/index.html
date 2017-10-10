@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Formulario con Bootstrap y jQuery">
+    <meta name="author" content="Eva">
+
+    <title> Formulario con Bootstrap y jQuery </title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/logo-nav.css" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="vendor/bootstrap/css/modal.css" />
+    <script type="text/javascript" src="vendor/jquery/jquery.min.js"></script>
+	<script type="text/javascript" src="vendor/jquery/modal.js"></script>
+	<script type="text/javascript" src="vendor/jquery/jquery-ui.js"></script>
+
+  </head>
+
+  <body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="#">Comenzando con Bootstrap</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Page Content -->
+
+    <div class="container">
+
+    	<h1 class="mt-5"> Formulario con Bootstrap y jQuery </h1>
+        <h6> Realizacion de un formulario que se envía  a un correo electrónico de una lista disponibles y muestra la hora de su envío. </h6>
+        <hr>
+
+    	<form id="formulario" autocomplete="off">
+
+			<label> Nombre: </label>
+				<input type="text" id="nombre">
+
+			<br>  
+
+			<label> Apellidos: </label>
+				<input type="text" id="apellidos">
+			<br>  
+
+			<label> Telefono: </label>
+				<input type="text" id="telefono">
+			<br>  
+
+			<label> Correo Electrónico: </label>
+				<input type="text" id="correo">          
+			<br>
+
+			<div id="radios">
+				<input type="radio" id="radioh" name="radio" value="Hombre"> Hombre
+				<input type="radio" id="radiom" name="radio" value="Mujer"> Mujer
+			</div>
+			<br>
+
+			<label> Mensaje: </label>
+				<textarea id="mensaje" rows="3" cols="30"> </textarea>
+			<br> 
+
+			<label> Fotografía: </label>
+				<input type="file" id="fichero" name="fichero">
+			<br>
+			<label> Correo destinatario: </label>
+				<select id="destino" name="destino">
+					<option value="Opcion I"> ejemplo1@hotmail.com </option>
+					<option value="Opcion II"> ejemplo2@hotmail.com </option>
+					<option value="Opcion III"> ejemplo3@hotmail.com </option>
+					<option value="Opcion IV"> ejemplo4@hotmail.com </option>
+					<option value="Opcion V"> ejemplo5@hotmail.com </option>
+					<option value="Opcion VI"> ejemplo6@hotmail.com </option>
+				</select>
+			<br>
+			<label for="terminar"> El formulario ha terminado. ¿Desea enviarlo? </label>
+			<br>
+				<input type="submit" value="Enviar" id="boton">
+		</form>
+
+		<div id="dialog">
+  			<h5><script> fechayhora();</script></h5>
+		</div>
+
+	</div>	
+
+  </body>
+
+</html>

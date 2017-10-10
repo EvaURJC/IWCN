@@ -1,0 +1,19 @@
+.mt-5{
+ 	margin-top:3rem!important;
+ 	color: rgb(150, 150, 0);
+	font-family: "Times New Roman";
+	text-align: center;
+}
+
+p {
+	color: rgb(255, 0, 0);
+}
+
+h5 {
+	color: rgb(0, 0, 255);
+
+}
+
+.ui-dialog{
+	background: #b6ff00;
+}
