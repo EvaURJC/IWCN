@@ -3,7 +3,6 @@ $(document).ready(function () {
     var c = /^[a-zA-Z0-9_\.\/\-]+\@(([a-zA-Z])+\.)+[a-z]+$/;
 
     $("#boton").button().click(function (){
-        $(".error").remove();
 
         if( ($("#nombre").val().length >= 3) && ($("#apellidos").val() != "") && (c.test($("#correo").val())) &&
             ($("#telefono").val().length == 9) && ($("#radios input[name='radio']").is(':checked')) ){
