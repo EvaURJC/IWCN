@@ -20,7 +20,7 @@ $(document).ready(function () {
             return false;
         }
 
-        else if ($('#telefono').val().length != 9 || isNaN($('#telefono').val())){
+        else if ($("#telefono").val().length != 9 || isNaN($("#telefono").val())){
             $("#telefono").focus().after("<p> Únicamente debe contener 9 números </p>");
             return false;
         }
