@@ -38,12 +38,6 @@ $(document).ready(function () {
 
 });
 
-$(":text").each(function(){ 
-            $($(this)).val('');
-    });
-
-
-//Hacer que dialog no aparezca en la pantalla y tenga un botón para cerrar
 $( function() {
     $( "#dialog" ).dialog({
         autoOpen: false,
@@ -54,17 +48,18 @@ $( function() {
             }
         }
     });
-});
+    $( "#dialog" ).dialog({
+        open: function() {
+            var tiempo = new Date();
+            var dia = tiempo.getDate();
+            var mes = tiempo.getMonth()+1;
+            var anio = tiempo.getFullYear();
+            var hora = tiempo.getHours();
+            var minuto = tiempo.getMinutes();
+            var segundo = tiempo.getSeconds();
+            var content = "El formulario es correcto y se ha enviado a: "+$("#destino").val()+"<br>"+"Enviado el dia " + dia + "/" + mes + "/" + anio + " a las " + hora + ":" + minuto + ":" + segundo;
+            $("#dialog").html(content);
+        }
 
-//Funcion que devuelve la fecha y la hora
-function fechayhora() {
-    var tiempo = new Date();
-    var dia = tiempo.getDate();
-    var mes = tiempo.getMonth()+1;
-    var anio = tiempo.getFullYear();
-    var hora = tiempo.getHours();
-    var minuto = tiempo.getMinutes();
-    var segundo = tiempo.getSeconds();
-    document.write("El formulario es correcto y se ha enviado a: "+$('#destino').val()+"<br>");
-    document.write("Enviado el dia " + dia + "/" + mes + "/" + anio + " a las " + hora + ":" + minuto + ":" + segundo);
-}
+    });
+});
